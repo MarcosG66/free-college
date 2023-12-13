@@ -1,4 +1,4 @@
-const { Departamentos } = require('../models/models');
+const { Departamentos } = require('../models/departamento');
 
 async function getDepartamentos() {
     return Departamentos.findAll();

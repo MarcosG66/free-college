@@ -1,4 +1,4 @@
-const { Professores } = require('../models/models');
+const { Professores } = require('../models/professor');
 
 async function getProfessores() {
     return Professores.findAll({ attributes: ['id', 'nome'] });

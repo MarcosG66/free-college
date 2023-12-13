@@ -1,4 +1,8 @@
-const { Cursos, Salas, Professores } = require('../models/models');
+const { Cursos } = require('../models/curso');
+const { Salas } = require('../models/sala');
+const { Professores } = require('../models/professor');
+
+
 
 async function getCursos() {
     return Cursos.findAll({ attributes: ['id', 'nome'] });

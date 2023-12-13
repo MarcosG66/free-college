@@ -1,4 +1,4 @@
-const { Salas } = require('../models/models');
+const { Salas } = require('../models/sala');
 
 async function getSalas() {
     return Salas.findAll();

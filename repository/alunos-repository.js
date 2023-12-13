@@ -1,7 +1,9 @@
-const { Alunos, Cursos } = require('../models/models');
+const { Alunos } = require('../models/aluno');
+const { Cursos } = require('../models/curso');
+
 
 async function getAlunos() {
-  return Alunos.findAll({ attributes: ['id', 'nome', 'email'] });
+  return Aluno.findAll();
 }
 
 async function getAlunosCursos() {
