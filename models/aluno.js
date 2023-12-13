@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       Aluno.hasMany(models.Matricula, {
         foreignKey: 'aluno_id',
         as: 'matriculas'
-      })
+      });
     }
   };
 
@@ -20,8 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     email: DataTypes.STRING
   }, {
-    sequelize,
     underscored: true,
+    sequelize,
   });
+  
   return Aluno;
-};
+}

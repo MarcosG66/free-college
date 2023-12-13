@@ -10,20 +10,22 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'departamento_id',
         as: 'departamento'
       });
-      Professor.hasMany(models.Curso, {
+      Professor.hasMany(models.Curso, { 
         foreignKey: 'professor_id',
         as: 'cursos'
       });
     }
   }
+  
   Professor.init({
     nome: {
         type: DataTypes.STRING(255),
         allowNull: false,
-      },
+      }
   }, {
     sequelize,
     underscored: true,
   });
+
   return Professor;
-};
+}

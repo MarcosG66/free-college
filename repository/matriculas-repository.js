@@ -1,15 +1,19 @@
+<<<<<<< HEAD
 const { Matriculas } = require('../models/matricula');
+=======
+const { Matricula } = require('../models/matricula');
+>>>>>>> 072940068cb708eebc7fd5de82196d035fad0c1d
 
 async function getMatriculas() {
-    return Matriculas.findAll();
+    return Matricula.findAll();
 }
 
 async function getMatricula(id) {
-    return Matriculas.findByPk(id);
+    return Matricula.findByPk(id);
 }
 
 async function addMatricula(matricula) {
-    const newMatricula = await Matriculas.create({
+    const newMatricula = await Matricula.create({
         aluno_id: matricula.aluno_id,
         curso_id: matricula.curso_id,
     });
@@ -17,7 +21,7 @@ async function addMatricula(matricula) {
 }
 
 async function deleteMatricula(id) {
-    return Matriculas.destroy({ where: { id } });
+    return Matricula.destroy({ where: { id } });
 }
 
 module.exports = {

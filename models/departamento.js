@@ -4,8 +4,7 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Departamento extends Model {
-  }
+  class Departamento extends Model { }
 
   Departamento.init({
     nome: {
@@ -16,5 +15,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     underscored: true,
   });
+
   return Departamento;
-};
+}

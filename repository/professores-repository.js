@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 const { Professores } = require('../models/professor');
+=======
+const { Professor } = require('../models/professor');
+>>>>>>> 072940068cb708eebc7fd5de82196d035fad0c1d
 
 async function getProfessores() {
-    return Professores.findAll({ attributes: ['id', 'nome'] });
+    return Professor.findAll({ attributes: ['id', 'nome'] });
 }
 
 async function getProfessoresCursos() {
     try {
-        const professores = await Professores.findAll({ attributes: ['id', 'nome'] });
+        const professores = await Professor.findAll({ attributes: ['id', 'nome'] });
 
         for (const professor of professores) {
             const cursos = await professor.getCursos();
@@ -20,12 +24,12 @@ async function getProfessoresCursos() {
 }
 
 async function getProfessor(id) {
-    return Professores.findByPk(id, { attributes: ['id', 'nome'] });
+    return Professor.findByPk(id, { attributes: ['id', 'nome'] });
 }
 
 async function addProfessor(professor) {
     try {
-        const newProfessor = await Professores.create({
+        const newProfessor = await Professor.create({
             nome: professor.nome,
             departamento_id: professor.departamento_id 
         });
@@ -38,12 +42,12 @@ async function addProfessor(professor) {
 }
 
 async function deleteProfessor(id) {
-    return Professores.destroy({ where: { id } });
+    return Professor.destroy({ where: { id } });
 }
 
 async function editProfessor(professor) {
     try {
-        const updatedProfessor = await Professores.findByPk(professor.id);
+        const updatedProfessor = await Professor.findByPk(professor.id);
         if (!updatedProfessor) {
             throw new Error('Professor não encontrado');
         }
