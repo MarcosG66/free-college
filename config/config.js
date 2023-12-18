@@ -17,6 +17,7 @@ module.exports = {
         updatedAt: 'updated_at',
     }
   },
+  //teste
   production: {
     username: process.env.PROD_DB_USERNAME,
     password: process.env.PROD_DB_PASSWORD,
