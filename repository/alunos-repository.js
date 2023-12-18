@@ -6,7 +6,7 @@ const { Cursos } = require('../models/curso');
 async function getAlunos() {
 =======
 const { Curso } = require('../models/curso');
-const { Aluno } = require('../models/aluno');
+const { Aluno } = require('../models');
 
 async function getAlunos() {
   console.log('Aluno', Aluno);
