@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const { Departamentos } = require('../models/departamento');
-=======
 const { Departamento } = require('../models/departamento');
->>>>>>> 072940068cb708eebc7fd5de82196d035fad0c1d
 
 async function getDepartamentos() {
     return Departamento.findAll();

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-const { Cursos } = require('../models/curso');
-const { Salas } = require('../models/sala');
-const { Professores } = require('../models/professor');
-
-
-=======
 const { Curso } = require('../models/curso');
 const { Sala } = require('../models/sala');
 const { Professor } = require('../models/professor');
->>>>>>> 072940068cb708eebc7fd5de82196d035fad0c1d
 
 async function getCursos() {
     return Curso.findAll({ attributes: ['id', 'nome'] });

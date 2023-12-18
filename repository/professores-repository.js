@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const { Professores } = require('../models/professor');
-=======
 const { Professor } = require('../models/professor');
->>>>>>> 072940068cb708eebc7fd5de82196d035fad0c1d
 
 async function getProfessores() {
     return Professor.findAll({ attributes: ['id', 'nome'] });
