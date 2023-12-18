@@ -1,9 +1,10 @@
 {
 	"scripts": {
 		"dev": "nodemon --inspect ./app.js",
+		"migration:generate": "sequelizemm -f ./models/index.js",
+		"migration:migrate": "sequelize-cli db:migrate",
 		"prod": "node ./app.js",
-		"migration:generate": "CLI=true sequelizemm -f ./models/index.js",
-		"migation:migrate": "sequelize-cli db:migrate"
+		"start": "sequelize-cli db:migrate && node ./app.js"
 	},
 	"devDependencies": {
 		"nodemon": "^3.0.1",
