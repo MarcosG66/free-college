@@ -6,6 +6,8 @@ const cursosRouter = require('./routes/cursos')
 const matriculasRouter = require('./routes/matriculas')
 const departamentosRouter = require('./routes/departamentos')
 const salasRouter = require('./routes/salas')
+const userRouter = require('./routes/user')
+const authRouter = require('.routes/auth')
 const port = 3000
 
 app.use(express.json());

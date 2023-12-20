@@ -1,3 +1,4 @@
+const { authenticateToken } = require('../auth/util');
 const { getAlunos, addAluno, getAluno, deleteAluno, editAluno, getAlunosCursos, getAlunoCursos } = require('../repository/alunos-repository');
 const express = require('express')
 const router = express.Router()
@@ -10,7 +11,7 @@ router.get('/cursos', async (req, res) => {
 // curl --request GET \
 //  --url http://localhost:3000/alunos \
 //  --header 'User-Agent: insomnia/8.2.0'
-router.get('/', async (req, res) => {
+router.get('/', authenticateToken, async (req, res) => {
     res.json(await getAlunos());
 });
 

@@ -7,12 +7,13 @@ const {
 } = require('../repository/cursos-repository');
 const express = require('express')
 const router = express.Router()
+const { authenticateToken } = require( '../auth/util' )
 
 // GET /cursos
 // curl --request GET \
 //  --url http://localhost:3000/cursos \
 //  --header 'User-Agent: insomnia/8.2.0'
-router.get('/', async (req, res) => {
+router.get('/', authenticateToken, async (req, res) => {
     res.json(await getCursos());
 });
 
